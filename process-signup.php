@@ -29,8 +29,8 @@ $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$sql = "INSERT INTO user(name, email, password_hash)
-        VALUES (?, ?, ?)";
+$sql = "INSERT INTO user(name, email, password_hash, aadhar, city_village_taluka, state, dob, pincode, gender, blood_group, phone_number)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $mysqli->stmt_init();
 
@@ -39,10 +39,18 @@ if(!$stmt->prepare($sql))
     die("SQL error");
 }
 
-$stmt->bind_param("sss",
+$stmt->bind_param("sssssssssss",
                 $_POST["name"],
                 $_POST["email"],
-                $password_hash);
+                $password_hash,
+                $_POST["aadhar"],
+                $_POST["cvt"],
+                $_POST["state"],
+                $_POST["dob"],
+                $_POST["pincode"],
+                $_POST["gender"],
+                $_POST["bg"],
+                $_POST["phone"]);
 
 if($stmt->execute())
 {
