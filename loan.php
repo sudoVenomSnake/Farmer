@@ -23,13 +23,15 @@ if(isset($_SESSION["user_id"]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" />
 </head>
 <body>
 
     <h1>Loan Details</h1>
 
     <?php if(isset($result)): ?>
+
+        <p>Loan ID|Amount|Interest|Months</p>
 
         <table border = '1px'>
         <?php
@@ -39,14 +41,12 @@ if(isset($_SESSION["user_id"]))
                 $interest = $row[1];
                 $months = $row[2];
                 $bid = $row[3];
-                $id = $row[4];
 
                 echo "<tr>";
                 echo "<td> {$amount} </td>";
                 echo "<td> {$interest} </td>";
                 echo "<td> {$months} </td>";
                 echo "<td> {$bid} </td>";
-                echo "<td> {$id} </td>";
                 echo "</tr>";
             }
         ?>

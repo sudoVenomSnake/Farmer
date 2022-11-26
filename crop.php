@@ -11,7 +11,7 @@ if(isset($_SESSION["user_id"]))
 
     $result = $mysqli->query($sql);
 
-    $user = $result->fetch_assoc();
+    // $user = $result->fetch_assoc();
 }
 
 ?>
@@ -23,13 +23,15 @@ if(isset($_SESSION["user_id"]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" />
 </head>
 <body>
 
     <h1>Crop Details</h1>
 
-    <?php if(isset($user)): ?>
+    <?php if(isset($result)): ?>
+
+        <p>Harvest Month|Crop Name|Quantity|Crop ID</p>
 
         <table border = '1px'>
         <?php
