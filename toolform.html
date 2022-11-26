@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" />
+</head>
+<body>
+
+    <h1>Enter Tool Details:</h1>
+
+    <form action = "process-tool.php" method = "post">
+        <div>
+            <label for = "name">Name</label>
+            <input type = "text" id = "name" name = "name">
+        </div>
+
+        <div>
+            <label for = "quantity">Quantity</label>
+            <input type = "text" id = "quantity" name = "quantity">
+        </div>
+
+        <div>
+            <label for = "dob">Date of Buying</label>
+            <input type = "date" id = "dob" name = "dob">
+        </div>
+
+        <div>
+            <label for = "scm">Scheduled Maintenance</label>
+            <input type = "text" id = "scm" name = "scm">
+        </div>
+        
+        <button>Add</button>
+
+    </form>
+    
+</body>
+</html>

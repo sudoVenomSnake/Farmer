@@ -19,15 +19,15 @@ if(isset($_SESSION["user_id"]))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FMS \ (•◡•) /</title>
+    <title>Farmophile</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8" /> -->
 </head>
 <body>
 
-    <h1>FMS \ (•◡•) /</h1>
+    <h1>Farmophile</h1>
 
     <?php if(isset($user)): ?>
 
@@ -40,6 +40,14 @@ if(isset($_SESSION["user_id"]))
         <p>Pincode - <?= htmlspecialchars($user["pincode"]) ?></p>
         <p>Blood Group - <?= htmlspecialchars($user["blood_group"]) ?></p>
         <p>Phone Number - <?= htmlspecialchars($user["phone_number"]) ?></p>
+
+        <p><a href = "crop.php">Crop details.</a></p>
+
+        <p><a href = "tool.php">Tool details.</a></p>
+
+        <p><a href = "loan.php">Loan details.</a></p>
+
+        <p><a href = "produce.php">Produce history.</a></p>
 
         <p><a href = "logout.php">Log out.</a></p>
 
